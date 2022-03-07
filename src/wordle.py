@@ -7,11 +7,10 @@ import random
 def main():
     answer = loadAnswer()
     valid_list = loadValidWords()
-    guess = ""
-    guess_list = [""]
+    guess = " "
     guess_log = []
     # print("".join(word)) # cheat
-    while guess != answer and guess_list != []:
+    while guess != answer and guess != "":
         print(chr(27)+'[2j\n\033c\n\x1bc') # ANSI escape sequence to clear console
         printTitle()
         for i in guess_log:
