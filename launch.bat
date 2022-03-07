@@ -1,2 +1,2 @@
 cd src
-wt.exe python3 wordle.py
+wt.exe python.exe wordle.py
