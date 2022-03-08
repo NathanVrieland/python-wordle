@@ -9,10 +9,10 @@ def main():
     valid_list = loadValidWords()
     guess = " "
     guess_log = []
-    # print("".join(word)) # cheat
     while guess != answer and guess != "":
         print(chr(27)+'[2j\n\033c\n\x1bc') # ANSI escape sequence to clear console
         printTitle()
+        # print("".join(answer)) # cheat
         for i in guess_log:
             print(i)
         guess = input()
@@ -22,10 +22,9 @@ def main():
         if not valid(guess, valid_list):
             continue
         guess_log.append(colorWord(guess, answer))
-        
-        
-
-
+    if guess == answer:
+        print(getGreen(guess))
+        _ = input() # suspends execution so player can see the answer
         
 
 def getGreen(character) -> str:
